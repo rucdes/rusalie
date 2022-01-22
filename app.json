@@ -1,0 +1,51 @@
+{
+  "name": "Alist V2",
+  "description": "Alist on Heroku",
+  "repository": "https://github.com/issenn/alist-config",
+  "keywords": [
+    "Alist",
+    "Docker"
+  ],
+  "website": "https://hub.docker.com/r/issenn/alist",
+  "success_url": "/",
+  "env": {
+    "DATABASE_TYPE": {
+      "description": "数据库类型（sqlite3 / mysql / postgres）",
+      "value": "sqlite3"
+    },
+    "DATABASE_USER": {
+      "description": "MySQL / PostgreSQL 用户名（数据库类型为远程 MySQL / PostgreSQL 时需要更改）",
+      "value": "root"
+    },
+    "DATABASE_PASSWORD": {
+      "description": "MySQL / PostgreSQL 密码（数据库类型为远程 MySQL / PostgreSQL 时需要更改）",
+      "value": "123456"
+    },
+    "DATABASE_HOST": {
+      "description": "MySQL / PostgreSQL 主机地址（数据库类型为远程 MySQL / PostgreSQL 时需要更改）",
+      "value": "0.0.0.0"
+    },
+    "DATABASE_PORT": {
+      "description": "MySQL / PostgreSQL 端口（数据库类型为远程 MySQL / PostgreSQL 时需要更改）",
+      "value": "3306"
+    },
+    "DATABASE_NAME": {
+      "description": "MySQL / PostgreSQL 数据库名称（数据库类型为远程 MySQL / PostgreSQL 时需要更改）",
+      "value": "alist_db"
+    },
+    "CACHE_EXPIRATION": {
+      "description": "缓存失效时间（单位:分钟）",
+      "value": "60"
+    },
+    "CLEANUP_INTERVAL": {
+      "description": "清理失效缓存间隔",
+      "value": "120"
+    },
+    "ASSETS": {
+      "description": "静态资源(可选local/jsdelivr/zhimg)",
+      "value": "zhimg"
+    }
+  },
+  "addons": [],
+  "stack": "container"
+}
